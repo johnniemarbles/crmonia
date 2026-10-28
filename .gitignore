@@ -1,0 +1,40 @@
+node_modules/
+.pnpm-store/
+.tmp-dist/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.next/
+*.tsbuildinfo
+
+# Scratch files
+.freebuff/
+EXPADIO_BRAIN_ROOT/
+error.log
+*.cjs
+fix_conflict.sh
+test-edit.sh
+.DS_Store
+test-results/
+playwright-report/
+EXPADIO NON REPO*
+* 2.*
+* 2
+
+# Root-level scratch: debug queries, decrypt/encrypt experiments and logs must not be committed.
+# Credential material belongs in the vault, never in the repository.
+/*.sql
+/*.log
+/*.diff
+/*.py
+/decrypt_*
+/encrypt_*
+/brute_force_*
+/get_*
+/fix_*
+/patch_*
+/test-*
+/test_*
+/logs.txt

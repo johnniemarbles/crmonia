@@ -1,0 +1,8 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'modules/*'
+  # Deployable services that are not Next apps. The scanner lives here rather
+  # than in apps/ because it ships as its own container and must not acquire a
+  # dependency on anything in this repository.
+  - 'services/*'

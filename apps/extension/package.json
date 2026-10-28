@@ -1,0 +1,18 @@
+{
+  "name": "@crmonia/extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check:freeze": "node check-freeze.mjs",
+    "pack": "node pack.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.5",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "@inboxsdk/core": "^2.2.31"
+  }
+}
