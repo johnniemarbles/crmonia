@@ -1,0 +1,208 @@
+/* ============================================================================
+   CRMONIA Enterprise Design System — Playbook Builder CSS Module
+   ============================================================================ */
+
+.workspaceShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0b0f17;
+  color: #f1f5f9;
+  font-family: var(--font-sans, 'Inter', -apple-system, sans-serif);
+}
+
+/* Top Hierarchy Scope & Governance Bar */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.5rem;
+  background-color: #111827;
+  border-bottom: 1px solid #1e293b;
+  gap: 1rem;
+}
+
+.scopeBreadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  background-color: #1e293b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+}
+
+.residencyBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.tabStrip {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0 1.5rem;
+  background-color: #111827;
+  border-bottom: 1px solid #1e293b;
+}
+
+.tabButton {
+  padding: 0.85rem 1.25rem;
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tabButtonActive {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.06);
+}
+
+/* Main Split Workbench (DAG Canvas Left + AST Inspector Right) */
+.workbenchSplit {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.dagCanvasPane {
+  padding: 1.5rem;
+  background-color: #0f172a;
+  border-right: 1px solid #1e293b;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.inspectorPane {
+  padding: 1.5rem 2rem;
+  background-color: #0b0f17;
+  overflow-y: auto;
+}
+
+/* DAG Node Cards */
+.dagNodeCard {
+  width: 100%;
+  max-width: 420px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.dagNodeCardSelected {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.dagConnectorLine {
+  width: 2px;
+  height: 24px;
+  background-color: #475569;
+}
+
+/* AST Block Cards & Lock Badges */
+.astBlockCard {
+  background-color: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.astBlockImmutable {
+  border-left: 4px solid #ef4444;
+  background-color: rgba(239, 68, 68, 0.04);
+}
+
+.astBlockTokenOnly {
+  border-left: 4px solid #eab308;
+}
+
+.astBlockApproval {
+  border-left: 4px solid #f97316;
+}
+
+.astBlockFreeEdit {
+  border-left: 4px solid #22c55e;
+}
+
+.blockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.textareaField {
+  width: 100%;
+  min-height: 84px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 0.65rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+.textareaField:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: #1e293b;
+}
+
+.primaryButton {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  background-color: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.dualBrainBanner {
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.15), rgba(168, 85, 247, 0.15));
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
